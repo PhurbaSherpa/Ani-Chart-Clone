@@ -1,4 +1,4 @@
-# Medium Clone
+# Ani-Chart Clone
 
 ## Purpose
 
