@@ -1,3 +1,8 @@
+.home-container {
+  width: 100vw;
+  height: 80vh;
+}
+
 .home-description {
   font-family: "Roboto";
   color: white;
@@ -7,4 +12,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.top3 {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 }

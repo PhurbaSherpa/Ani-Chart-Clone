@@ -23,6 +23,7 @@ type Anime struct {
 	Description string
 	Date        string
 	Season      string
+	Imageurl    string
 }
 
 type Genre struct {
@@ -47,7 +48,7 @@ func handleAnimeRoute(w http.ResponseWriter, req *http.Request) {
 		}
 		for rows.Next() {
 			a := new(Anime)
-			err := rows.Scan(&a.Id, &a.Title, &a.Description, &a.Date, &a.Season)
+			err := rows.Scan(&a.Id, &a.Title, &a.Description, &a.Date, &a.Season, &a.Imageurl)
 			if err != nil {
 				log.Fatalln(err)
 			}
@@ -113,7 +114,7 @@ func main() {
 
 	router.HandleFunc("/api/animes", handleAnimeRoute)
 
-	spa := spaHandler{staticPath: "./client", indexPath: "./public/index.html"}
+	spa := spaHandler{staticPath: "./static", indexPath: "./public/index.html"}
 	router.PathPrefix("/animes/").Handler(spa)
 	router.PathPrefix("/").Handler(spa)
 

@@ -12,7 +12,8 @@ type anime struct {
 	title       string
 	description string
 	date        string
-	season      string
+	season      string,
+	imageurl    string
 }
 
 type genre struct {
@@ -33,7 +34,7 @@ func main() {
 	defer db.Close()
 
 	animes := []anime{
-		{"Haikyuu!! To the TOP!!", "The fourth season of Haikyuu!! The Karasuno High School Volleyball Club finally won their way into the nationals after an intense battle for the Miyagi Prefecture Spring Tournament qualifiers. As they were preparing for the nationals, Kageyama is invited to go to All-Japan Youth Training Camp. At the same time, Tsukishima is invited to go to a special rookie select training camp for first-years in Miyagi Prefecture. Hinata feels panic that he’s being left behind.", "Jan 11, 2020", "Winter"}, {"DR.STONE", "After five years of harboring unspoken feelings, highschooler Taiju Ooki is finally ready to confess his love to Yuzuriha Ogawa. Just when Taiju begins his confession however, a blinding green light strikes the Earth and petrifies mankind around the world turning every single human into stone. Several millennia later, Taiju awakens to find the modern world completely nonexistent, as nature has flourished in the years humanity stood still. Among a stone world of statues, Taiju encounters one other living human: his science loving friend Senkuu, who has been active for a few months. Taiju learns that Senkuu has developed a grand scheme to launch the complete revival of civilization with science.", "Jul 5, 2019", "Summer"}, {"Boku no Hero Academia 4", "The villain world teeters on the brink of war now that All For One is out of the picture. Shigaraki of the League of Villains squares off with Overhaul of the yakuza, vying for total control of the shadows. Meanwhile, Deku gets tangled in another dangerous internship as he struggles to keep pace with his upperclassmanMirio.", "Oct 12, 2019", "Fall"}, {"Kimetsu no Yaiba", "Ever since the death of his father, the burden of supporting the family has fallen upon Tanjirou Kamado. Though living impoverished on a remote mountain, the Kamado family are able to enjoy a relatively peaceful life. One day, Tanjirou arrives back home and his whole family has been slaughtered. Worse still, the sole survivor is his sister Nezuko, has been turned into a bloodthirsty demon. Consumed by rage and hatred, Tanjirou swears to avenge his family and stay by his only remaining sibling.", "Apr 6, 2019", "Spring"},
+		{"Haikyuu!! To the TOP!!", "The fourth season of Haikyuu!! The Karasuno High School Volleyball Club finally won their way into the nationals after an intense battle for the Miyagi Prefecture Spring Tournament qualifiers. As they were preparing for the nationals, Kageyama is invited to go to All-Japan Youth Training Camp. At the same time, Tsukishima is invited to go to a special rookie select training camp for first-years in Miyagi Prefecture. Hinata feels panic that he’s being left behind.", "Jan 11, 2020", "Winter", "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx106625-UR22wB2NuNVi.png"}, {"DR.STONE", "After five years of harboring unspoken feelings, highschooler Taiju Ooki is finally ready to confess his love to Yuzuriha Ogawa. Just when Taiju begins his confession however, a blinding green light strikes the Earth and petrifies mankind around the world turning every single human into stone. Several millennia later, Taiju awakens to find the modern world completely nonexistent, as nature has flourished in the years humanity stood still. Among a stone world of statues, Taiju encounters one other living human: his science loving friend Senkuu, who has been active for a few months. Taiju learns that Senkuu has developed a grand scheme to launch the complete revival of civilization with science.", "Jul 5, 2019", "Summer", "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx105333-5p1MKBlGxZFF.jpg"}, {"Boku no Hero Academia 4", "The villain world teeters on the brink of war now that All For One is out of the picture. Shigaraki of the League of Villains squares off with Overhaul of the yakuza, vying for total control of the shadows. Meanwhile, Deku gets tangled in another dangerous internship as he struggles to keep pace with his upperclassmanMirio.", "Oct 12, 2019", "Fall", "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx104276-DplpGzgCoRZX.jpg"}, {"Kimetsu no Yaiba", "Ever since the death of his father, the burden of supporting the family has fallen upon Tanjirou Kamado. Though living impoverished on a remote mountain, the Kamado family are able to enjoy a relatively peaceful life. One day, Tanjirou arrives back home and his whole family has been slaughtered. Worse still, the sole survivor is his sister Nezuko, has been turned into a bloodthirsty demon. Consumed by rage and hatred, Tanjirou swears to avenge his family and stay by his only remaining sibling.", "Apr 6, 2019", "Spring","https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx101922-PEn1CTc93blC.jpg"},
 	}
 
 	genres := []genre{
@@ -45,8 +46,8 @@ func main() {
 
 	for _, anime := range animes {
 		sqlStaement := fmt.Sprintf(`
-		INSERT INTO anime (title, description, date, season)
-		VALUES ('%s','%s','%s','%s')`, anime.title, anime.description, anime.date, anime.season)
+		INSERT INTO anime (title, description, date, season, imageurl)
+		VALUES ('%s','%s','%s','%s','%s')`, anime.title, anime.description, anime.date, anime.season, anime.imageurl)
 		_, err = db.Exec(sqlStaement)
 		if err != nil {
 			log.Fatalln(err)

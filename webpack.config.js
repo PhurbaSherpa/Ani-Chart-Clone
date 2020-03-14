@@ -1,6 +1,6 @@
 module.exports = {
   mode: "development",
-  entry: "./client/index.js",
+  entry: "./static/index.js",
   module: {
     rules: [
       {
@@ -18,8 +18,12 @@ module.exports = {
     extensions: ["*", ".js", ".jsx"]
   },
   output: {
-    path: __dirname + "/public",
+    path: __dirname + "/static/dist",
     publicPath: "/",
     filename: "bundle.js"
+  },
+  devServer: {
+    contentBase: "./dist",
+    historyApiFallback: true
   }
 };

@@ -23,7 +23,8 @@ func main() {
 							title 					TEXT 					 NOT NULL,
 							description			TEXT					 NOT NULL,
 							date 						VARCHAR(200)	 NOT NULL,
-							season 					TEXT  				 NOT NULL
+							season 					TEXT  				 NOT NULL,
+							imageurl				TEXT					 NOT NULL
 		)`)
 	if err != nil {
 		log.Fatalln(err)
