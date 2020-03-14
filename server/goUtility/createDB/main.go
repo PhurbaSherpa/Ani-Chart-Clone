@@ -9,12 +9,13 @@ import (
 )
 
 func main() {
-	connStr := "user=phrbshrp password=Nepal123 dbname=anichart sslmode=disable"
+	var connStr string = "user=phrbshrp password=Nepal123 dbname=anichart sslmode=disable"
 
 	db, err := sql.Open("postgres", connStr)
 	if err != nil {
 		log.Fatalln(err)
 	}
+	defer db.Close()
 
 	table, err := db.Prepare(
 		`CREATE TABLE Anime (
@@ -37,7 +38,7 @@ func main() {
 	table, err = db.Prepare(
 		`CREATE TABLE Genre (
 							id 		SERIAL 		PRIMARY KEY		 NOT NULL,
-							type 					  TEXT 					 NOT NULL
+							genre 					  TEXT 					 NOT NULL
 		)`)
 	if err != nil {
 		log.Fatalln(err)
@@ -64,7 +65,5 @@ func main() {
 	} else {
 		fmt.Println("AnimeGenre table created successfully")
 	}
-
-	defer db.Close()
 
 }

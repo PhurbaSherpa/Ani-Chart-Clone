@@ -1,0 +1,40 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2.5%;
+}
+.navbar-brand {
+  display: flex;
+  justify-content: center;
+  font-family: "Open Sans";
+  width: 50%;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  font-size: 4em;
+}
+
+.logo-firsthalf {
+  color: white;
+}
+.logo-secondhalf {
+  color: skyblue;
+}
+
+a {
+  color: white;
+  font-family: "Roboto";
+  font-size: 1em;
+  text-decoration: none;
+}
+
+.nav-links {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 40%;
+}
