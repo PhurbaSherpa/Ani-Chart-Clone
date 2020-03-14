@@ -10,7 +10,10 @@ export default function Routes(props) {
         path="/animes"
         render={navProps => <AllAnimes {...navProps} animes={animes} />}
       />
-      <Route path="/" component={Home} />
+      <Route
+        path="/"
+        render={navProps => <Home {...navProps} animes={animes} />}
+      />
     </Switch>
   );
 }

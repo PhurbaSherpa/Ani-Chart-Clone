@@ -1,0 +1,40 @@
+img {
+  width: 15%;
+}
+
+.top3-container {
+  background-color: white;
+  border-radius: 2.5%;
+}
+
+.top3-container:hover {
+  border: black;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.top3info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  padding-left: 5%;
+}
+
+.top3-title {
+  color: rgb(0, 0, 0);
+  font-family: "Roboto";
+  letter-spacing: 2px;
+  font-size: 1.5em;
+}
+.top3-date {
+  color: rgb(0, 0, 0);
+  font-family: "Roboto";
+  font-size: 0.8em;
+}
+
+.single-row {
+  display: flex;
+  flex-direction: row;
+}

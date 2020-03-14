@@ -1,7 +1,7 @@
-.navbar {
+#navbar {
   display: flex;
   flex-direction: row;
-  margin-top: 2.5%;
+  padding-top: 2%;
 }
 .navbar-brand {
   display: flex;
@@ -20,7 +20,7 @@
   color: white;
 }
 .logo-secondhalf {
-  color: skyblue;
+  color: rgb(0, 132, 255);
 }
 
 a {
@@ -37,4 +37,12 @@ a {
   align-items: center;
   justify-content: space-evenly;
   width: 40%;
+}
+
+a:hover {
+  color: rgb(0, 132, 255);
+}
+
+.bg-black {
+  background-color: black;
 }

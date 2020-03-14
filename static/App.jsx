@@ -4,7 +4,7 @@ import Routes from "./routes";
 import { BrowserRouter as Router } from "react-router-dom";
 import axios from "axios";
 
-export default function App() {
+export default function App(props) {
   const [animes, setAnimes] = useState([]);
   useEffect(() => {
     const getAnimes = async () => {
@@ -17,7 +17,6 @@ export default function App() {
   }, [animes]);
   return (
     <Router>
-      <Navbar />
       <Routes animes={animes} />
     </Router>
   );

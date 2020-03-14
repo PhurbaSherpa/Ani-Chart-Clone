@@ -1,21 +1,32 @@
-.home-container {
+.hero {
+  background-image: url(https://i.pinimg.com/originals/cf/1e/1f/cf1e1f0935d8048f2da4ac4781d8261c.jpg);
+  background-size: cover;
+  height: 100vh;
   width: 100vw;
-  height: 80vh;
+}
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .home-description {
   font-family: "Roboto";
   color: white;
   font-size: 2em;
-  width: 65%;
+  width: 75%;
   padding: 2% 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
-
-.top3 {
-  display: flex;
-  flex-direction: row;
+.icon {
+  position: absolute;
+  bottom: 2%;
+  font-size: 5rem;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  color: black;
+}
+.icon:hover {
+  color: rgb(0, 132, 255);
 }

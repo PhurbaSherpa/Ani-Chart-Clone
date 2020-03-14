@@ -1,9 +1,5 @@
-img {
-  width: 40%;
-}
-
-.img-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.anime-container {
+  background-color: white;
+  width: 33%;
+  height: 20%;
 }
