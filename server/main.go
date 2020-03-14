@@ -27,8 +27,54 @@ type Anime struct {
 }
 
 type Genre struct {
-	Id    int
-	genre string
+	Genre string
+}
+
+func handleGenreRoute(w http.ResponseWriter, req *http.Request) {
+	db, err := sql.Open("postgres", connStr)
+	if err != nil {
+		log.Fatalln(err)
+	}
+	defer db.Close()
+	switch req.Method {
+	case "GET":
+		var genres []*Genre
+		vars := mux.Vars(req)
+		uri := vars["id"]
+
+		sqlStatement := `SELECT genre
+											FROM animegenre
+											INNER JOIN genre
+											ON animegenre.genreId = genre.id
+											INNER JOIN
+												anime
+												ON animegenre.animeId = anime.id
+												WHERE anime.id = $1
+											`
+		rows, err := db.Query(sqlStatement, uri)
+		defer rows.Close()
+		if err != nil {
+			log.Fatalln(err)
+		}
+		for rows.Next() {
+			a := new(Genre)
+
+			err := rows.Scan(&a.Genre)
+
+			if err != nil {
+				log.Fatalln(err)
+			}
+			genres = append(genres, a)
+		}
+		fmt.Println("200 SUCCESS")
+		w.Header().Set("Content-type", "application/json")
+		w.WriteHeader(200)
+		err = json.NewEncoder(w).Encode(genres)
+		if err != nil {
+			log.Fatalln(err)
+		}
+		return
+	}
 }
 
 func handleAnimeRoute(w http.ResponseWriter, req *http.Request) {
@@ -113,6 +159,7 @@ func main() {
 	router := mux.NewRouter()
 
 	router.HandleFunc("/api/animes", handleAnimeRoute)
+	router.HandleFunc("/api/genres/{id:.+}", handleGenreRoute)
 
 	spa := spaHandler{staticPath: "./static", indexPath: "./public/index.html"}
 	router.PathPrefix("/animes/").Handler(spa)
