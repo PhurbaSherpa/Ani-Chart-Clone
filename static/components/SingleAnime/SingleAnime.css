@@ -2,7 +2,9 @@
   font-size: 0.5em;
 }
 p {
-  word-wrap: break-word;
   overflow: hidden;
   text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 7; /* number of lines to show */
 }

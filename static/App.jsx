@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Navbar } from "./components";
 import Routes from "./routes";
 import { BrowserRouter as Router } from "react-router-dom";
 import axios from "axios";
 
-export default function App(props) {
+export default function App() {
   const [animes, setAnimes] = useState([]);
   useEffect(() => {
     const getAnimes = async () => {

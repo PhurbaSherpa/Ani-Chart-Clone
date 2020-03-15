@@ -36,8 +36,12 @@ export default function SingleAnime(props) {
         </div>
       </div>
       <div className="card-footer">
-        {genres.map(genre => {
-          return <small className="text-muted">+{genre} </small>;
+        {genres.map((genre, index) => {
+          return (
+            <small key={index} className="text-muted">
+              +{genre}{" "}
+            </small>
+          );
         })}
       </div>
     </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import "./LatestAnime.css";
 
-export default function SingleAnime(props) {
+export default function LatestAnime(props) {
   const { anime } = props;
 
   return (

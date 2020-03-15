@@ -26,16 +26,16 @@ export default function Navbar(props) {
             <Link to="/animes">Browse</Link>
           </div>
           <div className="nav-item">
-            <Link to="/">Winter</Link>
+            <Link to="/Winter">Winter</Link>
           </div>
           <div className="nav-item">
-            <Link to="/">Spring</Link>
+            <Link to="/Spring">Spring</Link>
           </div>
           <div className="nav-item">
-            <Link to="/">Summer</Link>
+            <Link to="/Summer">Summer</Link>
           </div>
           <div className="nav-item">
-            <Link to="/">Fall</Link>
+            <Link to="/Fall">Fall</Link>
           </div>
         </div>
       </nav>
