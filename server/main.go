@@ -26,6 +26,57 @@ type Anime struct {
 	Imageurl    string
 }
 
+type Character struct {
+	Id          int
+	AnimeId     int
+	Name        string
+	Imageurl    string
+	Role        string
+	Description string
+}
+
+func handleCharactersRoute(w http.ResponseWriter, req *http.Request) {
+	db, err := sql.Open("postgres", connStr)
+	if err != nil {
+		log.Fatalln(err)
+	}
+	defer db.Close()
+	switch req.Method {
+	case "GET":
+		var characters []*Character
+		vars := mux.Vars(req)
+		uri := vars["id"]
+		sqlStatement := `SELECT * FROM character
+												WHERE character.animeId = $1`
+		rows, err := db.Query(sqlStatement, uri)
+		defer rows.Close()
+		if err != nil {
+			log.Fatalln(err)
+		}
+		for rows.Next() {
+			a := new(Character)
+			err := rows.Scan(&a.Id, &a.AnimeId, &a.Name, &a.Imageurl, &a.Role, &a.Description)
+			if err != nil {
+				log.Fatalln(err)
+			}
+			characters = append(characters, a)
+		}
+
+		fmt.Println("200 SUCCESS", characters)
+		w.Header().Set("Content-type", "application/json")
+		w.WriteHeader(200)
+		err = json.NewEncoder(w).Encode(characters)
+		if err != nil {
+			log.Fatalln(err)
+		}
+		return
+	case "POST":
+		fmt.Fprint(w, "POST")
+	default:
+		log.Fatalln("Bad Request")
+	}
+}
+
 func handleGenreRoute(w http.ResponseWriter, req *http.Request) {
 	db, err := sql.Open("postgres", connStr)
 	if err != nil {
@@ -156,9 +207,12 @@ func main() {
 
 	router.HandleFunc("/api/animes", handleAnimeRoute)
 	router.HandleFunc("/api/genres/{id:.+}", handleGenreRoute)
+	router.HandleFunc("/api/characters/{id:.+}", handleCharactersRoute)
 
 	spa := spaHandler{staticPath: "./static", indexPath: "./public/index.html"}
 	router.PathPrefix("/animes/").Handler(spa)
+	router.PathPrefix("/genres/").Handler(spa)
+	router.PathPrefix("/characters/").Handler(spa)
 	router.PathPrefix("/").Handler(spa)
 
 	srv := &http.Server{
