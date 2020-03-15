@@ -8,3 +8,14 @@ p {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 7; /* number of lines to show */
 }
+
+.card:hover {
+  border: black 1px solid;
+  cursor: pointer;
+}
+
+.genre:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: bold;
+}

@@ -18,7 +18,7 @@ export default function SingleAnime(props) {
   }, [genres.length]);
 
   return (
-    <div className="pb-3" style={{ width: "30%" }}>
+    <div className="pb-3 anime-box" style={{ width: "30%" }}>
       <div className="card">
         <div className="row no-gutters">
           <div className="col-md-4">
@@ -29,7 +29,7 @@ export default function SingleAnime(props) {
               <h5 className="card-title">{anime.Title}</h5>
               <p className="card-text">{anime.Description}</p>
               <p className="card-text">
-                <small className="text-muted">{anime.Date}</small>
+                <small className="text-muted">Release Date: {anime.Date}</small>
               </p>
             </div>
           </div>
@@ -38,7 +38,7 @@ export default function SingleAnime(props) {
       <div className="card-footer">
         {genres.map((genre, index) => {
           return (
-            <small key={index} className="text-muted">
+            <small key={index} className="text-muted genre">
               +{genre}{" "}
             </small>
           );

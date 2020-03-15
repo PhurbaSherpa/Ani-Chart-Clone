@@ -54,8 +54,8 @@ func main() {
 	table, err = db.Prepare(
 		`CREATE TABLE AnimeGenre (
 								id 		SERIAL 		PRIMARY KEY		 NOT NULL,
-								animeId  				INT,
-								genreId					INT
+								animeId  				INT 					 NOT NULL,
+								genreId					INT 					 NOT NULL
 			)`)
 	if err != nil {
 		log.Fatalln(err)
@@ -65,6 +65,25 @@ func main() {
 		log.Fatalln(err)
 	} else {
 		fmt.Println("AnimeGenre table created successfully")
+	}
+
+	table, err = db.Prepare(
+		`CREATE TABLE Character (
+								id 		SERIAL 		PRIMARY KEY		 NOT NULL,
+								animeId  				INT 					 NOT NULL,
+								name						TEXT 					 NOT NULL,
+								imageurl        TEXT					 NOT NULL,
+								role   					TEXT					 NOT NULL,
+								description 		TEXT 					 NOT NULL
+			)`)
+	if err != nil {
+		log.Fatalln(err)
+	}
+	_, err = table.Exec()
+	if err != nil {
+		log.Fatalln(err)
+	} else {
+		fmt.Println("Character table created successfully")
 	}
 
 }
