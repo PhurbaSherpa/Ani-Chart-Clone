@@ -1,10 +1,12 @@
-.list-container {
-  width: 100vw;
-  background-color: black;
-  height: 100vh;
-  z-index: 10;
+.all-animes {
+  background-color: rgb(236, 236, 236);
 }
-
-.anime-list {
-  width: 80vw;
+.list-container {
+  margin-top: 2%;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }

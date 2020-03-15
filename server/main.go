@@ -26,10 +26,6 @@ type Anime struct {
 	Imageurl    string
 }
 
-type Genre struct {
-	Genre string
-}
-
 func handleGenreRoute(w http.ResponseWriter, req *http.Request) {
 	db, err := sql.Open("postgres", connStr)
 	if err != nil {
@@ -38,7 +34,7 @@ func handleGenreRoute(w http.ResponseWriter, req *http.Request) {
 	defer db.Close()
 	switch req.Method {
 	case "GET":
-		var genres []*Genre
+		var genres []string
 		vars := mux.Vars(req)
 		uri := vars["id"]
 
@@ -57,14 +53,14 @@ func handleGenreRoute(w http.ResponseWriter, req *http.Request) {
 			log.Fatalln(err)
 		}
 		for rows.Next() {
-			a := new(Genre)
+			var genre string
 
-			err := rows.Scan(&a.Genre)
+			err := rows.Scan(&genre)
 
 			if err != nil {
 				log.Fatalln(err)
 			}
-			genres = append(genres, a)
+			genres = append(genres, genre)
 		}
 		fmt.Println("200 SUCCESS")
 		w.Header().Set("Content-type", "application/json")

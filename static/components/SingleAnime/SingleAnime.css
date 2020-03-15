@@ -1,5 +1,8 @@
-.anime-container {
-  background-color: white;
-  width: 33%;
-  height: 20%;
+.card-text {
+  font-size: 0.5em;
+}
+p {
+  word-wrap: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

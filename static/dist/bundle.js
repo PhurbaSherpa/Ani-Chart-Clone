@@ -444,6 +444,17 @@ eval("\n\nvar bind = __webpack_require__(/*! ./helpers/bind */ \"./node_modules/
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/dist/cjs.js!./static/components/AllAnimes/AllAnimes.css":
+/*!*****************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./static/components/AllAnimes/AllAnimes.css ***!
+  \*****************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\nexports = ___CSS_LOADER_API_IMPORT___(false);\n// Module\nexports.push([module.i, \".all-animes {\\n  background-color: rgb(236, 236, 236);\\n}\\n.list-container {\\n  margin-top: 2%;\\n  width: 100vw;\\n  height: 100vh;\\n  display: flex;\\n  flex-direction: row;\\n  flex-wrap: wrap;\\n  justify-content: space-evenly;\\n}\\n\", \"\"]);\n// Exports\nmodule.exports = exports;\n\n\n//# sourceURL=webpack:///./static/components/AllAnimes/AllAnimes.css?./node_modules/css-loader/dist/cjs.js");
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js!./static/components/Home/home.css":
 /*!*******************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./static/components/Home/home.css ***!
@@ -477,6 +488,17 @@ eval("// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../.
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/dist/cjs.js!./static/components/SingleAnime/SingleAnime.css":
+/*!*********************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./static/components/SingleAnime/SingleAnime.css ***!
+  \*********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\nexports = ___CSS_LOADER_API_IMPORT___(false);\n// Module\nexports.push([module.i, \".card-text {\\n  font-size: 0.5em;\\n}\\np {\\n  word-wrap: break-word;\\n  overflow: hidden;\\n  text-overflow: ellipsis;\\n}\\n\", \"\"]);\n// Exports\nmodule.exports = exports;\n\n\n//# sourceURL=webpack:///./static/components/SingleAnime/SingleAnime.css?./node_modules/css-loader/dist/cjs.js");
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js!./static/components/TopThree/TopThree.css":
 /*!***************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./static/components/TopThree/TopThree.css ***!
@@ -484,7 +506,7 @@ eval("// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../.
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\nexports = ___CSS_LOADER_API_IMPORT___(false);\n// Module\nexports.push([module.i, \".Topthree-container {\\n  display: flex;\\n  align-items: center;\\n  height: 100vh;\\n  flex-direction: column;\\n}\\n\\n.top3-description {\\n  color: aliceblue;\\n  font-family: \\\"Roboto\\\";\\n  font-size: 3em;\\n  padding: 2% 0;\\n  background-color: black;\\n  width: 100%;\\n  display: flex;\\n  justify-content: center;\\n}\\n\\n.slider-container {\\n  width: 80%;\\n  position: relative;\\n}\\n\\n.top3-bg {\\n  background-image: url(https://wallpaperaccess.com/full/44772.jpg);\\n  background-size: cover;\\n  width: 100%;\\n  height: 100%;\\n  display: flex;\\n  justify-content: center;\\n}\\n\\n.top3-list {\\n  padding-top: 5%;\\n  display: flex;\\n  flex-direction: column;\\n  justify-content: space-between;\\n  height: 60%;\\n  width: 35%;\\n}\\n\", \"\"]);\n// Exports\nmodule.exports = exports;\n\n\n//# sourceURL=webpack:///./static/components/TopThree/TopThree.css?./node_modules/css-loader/dist/cjs.js");
+eval("// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\nexports = ___CSS_LOADER_API_IMPORT___(false);\n// Module\nexports.push([module.i, \".Topthree-container {\\n  display: flex;\\n  align-items: center;\\n  height: 100vh;\\n  flex-direction: column;\\n}\\n\\n.top3-description {\\n  color: aliceblue;\\n  font-family: \\\"Open Sans\\\";\\n  font-size: 3em;\\n  padding: 2% 0;\\n  background-color: black;\\n  width: 100%;\\n  display: flex;\\n  justify-content: center;\\n}\\n\\n.slider-container {\\n  width: 80%;\\n  position: relative;\\n}\\n\\n.top3-bg {\\n  background-image: url(https://wallpaperaccess.com/full/44772.jpg);\\n  background-size: cover;\\n  width: 100%;\\n  height: 100%;\\n  display: flex;\\n  justify-content: center;\\n}\\n\\n.top3-list {\\n  padding-top: 5%;\\n  display: flex;\\n  flex-direction: column;\\n  justify-content: space-between;\\n  height: 60%;\\n  width: 35%;\\n}\\n\", \"\"]);\n// Exports\nmodule.exports = exports;\n\n\n//# sourceURL=webpack:///./static/components/TopThree/TopThree.css?./node_modules/css-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -878,6 +900,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 
 /***/ }),
 
+/***/ "./static/components/AllAnimes/AllAnimes.css":
+/*!***************************************************!*\
+  !*** ./static/components/AllAnimes/AllAnimes.css ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("var api = __webpack_require__(/*! ../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ \"./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js\");\n            var content = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js!./AllAnimes.css */ \"./node_modules/css-loader/dist/cjs.js!./static/components/AllAnimes/AllAnimes.css\");\n\n            content = content.__esModule ? content.default : content;\n\n            if (typeof content === 'string') {\n              content = [[module.i, content, '']];\n            }\n\nvar options = {};\n\noptions.insert = \"head\";\noptions.singleton = false;\n\nvar update = api(content, options);\n\nvar exported = content.locals ? content.locals : {};\n\n\n\nmodule.exports = exported;\n\n//# sourceURL=webpack:///./static/components/AllAnimes/AllAnimes.css?");
+
+/***/ }),
+
 /***/ "./static/components/AllAnimes/AllAnimes.jsx":
 /*!***************************************************!*\
   !*** ./static/components/AllAnimes/AllAnimes.jsx ***!
@@ -886,7 +919,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return AllAnimes; });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _SingleAnime_SingleAnime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../SingleAnime/SingleAnime */ \"./static/components/SingleAnime/SingleAnime.jsx\");\n/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! .. */ \"./static/components/index.js\");\n\n\n\nfunction AllAnimes(props) {\n  var animes = props.animes;\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(___WEBPACK_IMPORTED_MODULE_2__[\"Navbar\"], {\n    url: props.match.path\n  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    className: \"list-container\"\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    className: \"anime-list\"\n  }, animes.map(function (anime, index) {\n    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SingleAnime_SingleAnime__WEBPACK_IMPORTED_MODULE_1__[\"default\"], {\n      key: index,\n      anime: anime\n    });\n  }))));\n}\n\n//# sourceURL=webpack:///./static/components/AllAnimes/AllAnimes.jsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return AllAnimes; });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _SingleAnime_SingleAnime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../SingleAnime/SingleAnime */ \"./static/components/SingleAnime/SingleAnime.jsx\");\n/* harmony import */ var _Navbar_Navbar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Navbar/Navbar */ \"./static/components/Navbar/Navbar.jsx\");\n/* harmony import */ var _AllAnimes_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./AllAnimes.css */ \"./static/components/AllAnimes/AllAnimes.css\");\n/* harmony import */ var _AllAnimes_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_AllAnimes_css__WEBPACK_IMPORTED_MODULE_3__);\n\n\n\n\nfunction AllAnimes(props) {\n  var animes = props.animes;\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    className: \"all-animes\"\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Navbar_Navbar__WEBPACK_IMPORTED_MODULE_2__[\"default\"], {\n    url: props.match.path\n  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    className: \"list-container\"\n  }, animes.map(function (anime, index) {\n    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SingleAnime_SingleAnime__WEBPACK_IMPORTED_MODULE_1__[\"default\"], {\n      key: index,\n      anime: anime\n    });\n  })));\n}\n\n//# sourceURL=webpack:///./static/components/AllAnimes/AllAnimes.jsx?");
 
 /***/ }),
 
@@ -959,6 +992,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 
 /***/ }),
 
+/***/ "./static/components/SingleAnime/SingleAnime.css":
+/*!*******************************************************!*\
+  !*** ./static/components/SingleAnime/SingleAnime.css ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("var api = __webpack_require__(/*! ../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ \"./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js\");\n            var content = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js!./SingleAnime.css */ \"./node_modules/css-loader/dist/cjs.js!./static/components/SingleAnime/SingleAnime.css\");\n\n            content = content.__esModule ? content.default : content;\n\n            if (typeof content === 'string') {\n              content = [[module.i, content, '']];\n            }\n\nvar options = {};\n\noptions.insert = \"head\";\noptions.singleton = false;\n\nvar update = api(content, options);\n\nvar exported = content.locals ? content.locals : {};\n\n\n\nmodule.exports = exported;\n\n//# sourceURL=webpack:///./static/components/SingleAnime/SingleAnime.css?");
+
+/***/ }),
+
 /***/ "./static/components/SingleAnime/SingleAnime.jsx":
 /*!*******************************************************!*\
   !*** ./static/components/SingleAnime/SingleAnime.jsx ***!
@@ -967,7 +1011,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return SingleAnime; });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nfunction SingleAnime(props) {\n  var anime = props.anime;\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    className: \"anime-container\"\n  });\n}\n\n//# sourceURL=webpack:///./static/components/SingleAnime/SingleAnime.jsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return SingleAnime; });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _SingleAnime_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./SingleAnime.css */ \"./static/components/SingleAnime/SingleAnime.css\");\n/* harmony import */ var _SingleAnime_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_SingleAnime_css__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ \"./node_modules/axios/index.js\");\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);\nfunction asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }\n\nfunction _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"next\", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"throw\", err); } _next(undefined); }); }; }\n\nfunction _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }\n\nfunction _nonIterableRest() { throw new TypeError(\"Invalid attempt to destructure non-iterable instance\"); }\n\nfunction _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === \"[object Arguments]\")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i[\"return\"] != null) _i[\"return\"](); } finally { if (_d) throw _e; } } return _arr; }\n\nfunction _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }\n\n\n\n\nfunction SingleAnime(props) {\n  var anime = props.anime;\n\n  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__[\"useState\"])([]),\n      _useState2 = _slicedToArray(_useState, 2),\n      genres = _useState2[0],\n      setGenres = _useState2[1];\n\n  Object(react__WEBPACK_IMPORTED_MODULE_0__[\"useEffect\"])(function () {\n    var getGenres = /*#__PURE__*/function () {\n      var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {\n        var _ref2, genres;\n\n        return regeneratorRuntime.wrap(function _callee$(_context) {\n          while (1) {\n            switch (_context.prev = _context.next) {\n              case 0:\n                _context.next = 2;\n                return axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(\"/api/genres/\".concat(anime.Id));\n\n              case 2:\n                _ref2 = _context.sent;\n                genres = _ref2.data;\n                setGenres(genres);\n\n              case 5:\n              case \"end\":\n                return _context.stop();\n            }\n          }\n        }, _callee);\n      }));\n\n      return function getGenres() {\n        return _ref.apply(this, arguments);\n      };\n    }();\n\n    if (!genres.length) {\n      getGenres();\n    }\n\n    console.log(genres);\n  }, [genres.length]);\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    className: \"pb-3\",\n    style: {\n      width: \"30%\"\n    }\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    className: \"card\"\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    className: \"row no-gutters\"\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    className: \"col-md-4\"\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"img\", {\n    src: anime.Imageurl,\n    className: \"card-img\",\n    alt: \"...\"\n  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    className: \"col-md-8\"\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    className: \"card-body\"\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"h5\", {\n    className: \"card-title\"\n  }, anime.Title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"p\", {\n    className: \"card-text\"\n  }, anime.Description), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"p\", {\n    className: \"card-text\"\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"small\", {\n    className: \"text-muted\"\n  }, anime.Date)))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    className: \"card-footer\"\n  }, genres.map(function (genre) {\n    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"small\", {\n      className: \"text-muted\"\n    }, \"+\", genre, \" \");\n  })));\n}\n\n//# sourceURL=webpack:///./static/components/SingleAnime/SingleAnime.jsx?");
 
 /***/ }),
 
