@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "./SingleAnime.css";
 import axios from "axios";
 
@@ -19,7 +20,7 @@ export default function SingleAnime(props) {
 
   return (
     <div className="pb-3 anime-box" style={{ width: "30%" }}>
-      <div className="card">
+      <Link to={`/characters/${anime.Id}`} className="card">
         <div className="row no-gutters">
           <div className="col-md-4">
             <img src={anime.Imageurl} className="card-img" alt="..." />
@@ -34,11 +35,11 @@ export default function SingleAnime(props) {
             </div>
           </div>
         </div>
-      </div>
+      </Link>
       <div className="card-footer">
         {genres.map((genre, index) => {
           return (
-            <small key={index} className="text-muted genre">
+            <small key={index} className="genre">
               +{genre}{" "}
             </small>
           );

@@ -1,5 +1,13 @@
+.card-title {
+  color: black;
+}
 .card-text {
   font-size: 0.5em;
+  text-decoration: none;
+  color: black;
+}
+.card-footer {
+  background-color: whitesmoke;
 }
 p {
   overflow: hidden;
@@ -12,6 +20,7 @@ p {
 .card:hover {
   border: black 1px solid;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .genre:hover {
