@@ -1,0 +1,15 @@
+.single-character {
+  width: 45%;
+}
+
+.single-character:hover {
+  border: solid black 1px;
+}
+
+.single-character img {
+  width: 50%;
+}
+
+.character-role {
+  font-size: 1.5em;
+}

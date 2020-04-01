@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { Navbar, Detailsbar, SingleCharacter } from "../../components";
+import "./AnimeDetails.css";
 import axios from "axios";
 
 export default function AnimeDetails(props) {
@@ -15,8 +17,38 @@ export default function AnimeDetails(props) {
     };
     getDetails(id);
   }, [id]);
-  console.log(characters);
-  console.log(anime);
 
-  return <div></div>;
+  return (
+    <div>
+      <Navbar />
+      <div className="details-container">
+        <div className="card mb-3 anime-info">
+          <div className="row no-gutters">
+            <div className="col-md-4">
+              <img src={anime.Imageurl} className="card-img" alt="..." />
+            </div>
+            <div className="col-md-8">
+              <div className="card-body">
+                <h5 className="card-title detail-title">{anime.Title}</h5>
+                <p className="card-text detail-description">
+                  {anime.Description}
+                </p>
+                <p className="card-text">
+                  <small className="text-muted detail-date">
+                    Release Date: {anime.Date}
+                  </small>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <Detailsbar />
+        <div className="character-list">
+          {characters.map((character, index) => {
+            return <SingleCharacter key={index} character={character} />;
+          })}
+        </div>
+      </div>
+    </div>
+  );
 }

@@ -35,6 +35,46 @@ type Character struct {
 	Description string
 }
 
+func handleSingleCharacterRoute(w http.ResponseWriter, req *http.Request) {
+	db, err := sql.Open("postgres", connStr)
+	if err != nil {
+		log.Fatalln(err)
+	}
+	defer db.Close()
+	switch req.Method {
+	case "GET":
+		var character *Character
+		vars := mux.Vars(req)
+		uri := vars["id"]
+		sqlStatement := `Select * FROM character
+											WHERE character.Id = $1`
+		rows, err := db.Query(sqlStatement, uri)
+		if err != nil {
+			log.Fatalln(err)
+		}
+		for rows.Next() {
+			a := new(Character)
+			err := rows.Scan(&a.Id, &a.AnimeId, &a.Name, &a.Imageurl, &a.Role, &a.Description)
+			if err != nil {
+				log.Fatalln(err)
+			}
+			character = a
+		}
+		fmt.Println("200 SUCCESS")
+		w.Header().Set("Content-type", "application/json")
+		w.WriteHeader(200)
+		err = json.NewEncoder(w).Encode(character)
+		if err != nil {
+			log.Fatalln(err)
+		}
+		return
+	case "POST":
+		fmt.Fprint(w, "POST")
+	default:
+		log.Fatalln("Bad Request")
+	}
+}
+
 func handleSingleAnimeRoute(w http.ResponseWriter, req *http.Request) {
 	db, err := sql.Open("postgres", connStr)
 	if err != nil {
@@ -43,7 +83,7 @@ func handleSingleAnimeRoute(w http.ResponseWriter, req *http.Request) {
 	defer db.Close()
 	switch req.Method {
 	case "GET":
-		var anime []*Anime
+		var anime *Anime
 		vars := mux.Vars(req)
 		uri := vars["id"]
 		sqlStatement := `Select * FROM anime
@@ -58,7 +98,7 @@ func handleSingleAnimeRoute(w http.ResponseWriter, req *http.Request) {
 			if err != nil {
 				log.Fatalln(err)
 			}
-			anime = append(anime, a)
+			anime = a
 		}
 		fmt.Println("200 SUCCESS")
 		w.Header().Set("Content-type", "application/json")
@@ -103,7 +143,7 @@ func handleCharactersRoute(w http.ResponseWriter, req *http.Request) {
 			characters = append(characters, a)
 		}
 
-		fmt.Println("200 SUCCESS", characters)
+		fmt.Println("200 SUCCESS")
 		w.Header().Set("Content-type", "application/json")
 		w.WriteHeader(200)
 		err = json.NewEncoder(w).Encode(characters)
@@ -201,6 +241,7 @@ func handleAnimeRoute(w http.ResponseWriter, req *http.Request) {
 	default:
 		log.Fatalln("Bad Request")
 	}
+
 }
 
 type spaHandler struct {
@@ -249,12 +290,11 @@ func main() {
 	router.HandleFunc("/api/animes", handleAnimeRoute)
 	router.HandleFunc("/api/animes/{id:.+}", handleSingleAnimeRoute)
 	router.HandleFunc("/api/genres/{id:.+}", handleGenreRoute)
+	router.HandleFunc("/api/animes/{id:.+}", handleSingleAnimeRoute)
 	router.HandleFunc("/api/characters/{id:.+}", handleCharactersRoute)
+	router.HandleFunc("/api/character/{id:.+}", handleSingleCharacterRoute)
 
-	spa := spaHandler{staticPath: "./static", indexPath: "./public/index.html"}
-	router.PathPrefix("/animes/").Handler(spa)
-	router.PathPrefix("/genres/").Handler(spa)
-	router.PathPrefix("/characters/").Handler(spa)
+	spa := spaHandler{staticPath: "./static", indexPath: "./static/index.html"}
 	router.PathPrefix("/").Handler(spa)
 
 	srv := &http.Server{

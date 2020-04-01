@@ -1,0 +1,11 @@
+.details-bar {
+  width: 60%;
+}
+
+.character {
+  color: grey;
+}
+
+.character:hover {
+  color: black;
+}

@@ -1,12 +1,19 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import { AllAnimes, Home, SeasonList, AnimeDetails } from "./components";
+import {
+  AllAnimes,
+  Home,
+  SeasonList,
+  AnimeDetails,
+  CharacterDetails
+} from "./components";
 
 export default function Routes(props) {
   const { animes } = props;
   return (
     <Switch>
-      <Route path="/characters/:id" component={AnimeDetails} />
+      <Route path="/character/:id" component={CharacterDetails} />
+      <Route path="/animes/:id" component={AnimeDetails} />
       <Route
         path="/Winter"
         render={navProps => <SeasonList {...navProps} animes={animes} />}

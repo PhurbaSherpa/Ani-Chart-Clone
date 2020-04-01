@@ -7,9 +7,10 @@
   color: black;
 }
 .card-footer {
-  background-color: whitesmoke;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.125);
 }
-p {
+.hover p {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -17,7 +18,7 @@ p {
   -webkit-line-clamp: 7; /* number of lines to show */
 }
 
-.card:hover {
+.hover:hover {
   border: black 1px solid;
   cursor: pointer;
   text-decoration: none;

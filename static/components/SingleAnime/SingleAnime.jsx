@@ -20,7 +20,7 @@ export default function SingleAnime(props) {
 
   return (
     <div className="pb-3 anime-box" style={{ width: "30%" }}>
-      <Link to={`/characters/${anime.Id}`} className="card">
+      <Link to={`/animes/${anime.Id}`} className="card hover">
         <div className="row no-gutters">
           <div className="col-md-4">
             <img src={anime.Imageurl} className="card-img" alt="..." />
