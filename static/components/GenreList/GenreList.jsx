@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Navbar } from "../../components";
+import { Navbar, SingleAnime } from "../../components";
 import "./GenreList.css";
 import axios from "axios";
 
@@ -20,6 +20,16 @@ export default function GenreList(props) {
   return (
     <div>
       <Navbar />
+      <h1>{genre}</h1>
+      <div className="list-container">
+        {animes.length ? (
+          animes.map((anime, index) => {
+            return <SingleAnime key={index} anime={anime} />;
+          })
+        ) : (
+          <div>No animes in this genre</div>
+        )}
+      </div>
     </div>
   );
 }
