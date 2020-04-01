@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./SeasonList.css";
-import Navbar from "../Navbar/Navbar";
-
-import axios from "axios";
-import SingleAnime from "../SingleAnime/SingleAnime";
+import { Navbar, SingleAnime } from "../../components";
 
 export default function SeasonList(props) {
   const season = props.match.path.slice(1);
@@ -26,6 +23,7 @@ export default function SeasonList(props) {
   return (
     <div>
       <Navbar />
+      <h1>{season}</h1>
       <div className="list-container">
         {animes.length ? (
           animes.map((anime, index) => {

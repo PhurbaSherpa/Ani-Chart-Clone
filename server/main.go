@@ -35,6 +35,55 @@ type Character struct {
 	Description string
 }
 
+func handleAnimesGenreRoute(w http.ResponseWriter, req *http.Request) {
+	db, err := sql.Open("postgres", connStr)
+	if err != nil {
+		log.Fatalln(err)
+	}
+	defer db.Close()
+	switch req.Method {
+	case "GET":
+		var animes []*Anime
+		vars := mux.Vars(req)
+		uri := vars["genre"]
+
+		sqlStatement := `SELECT anime.id, anime.title, anime.description, anime.date, anime.season,anime.imageurl
+										 FROM animegenre
+										 INNER JOIN anime
+										 ON animegenre.animeId = anime.id
+										 INNER JOIN
+												 genre
+												 ON animegenre.genreId = genre.id
+										 		 WHERE genre.genre = $1`
+		rows, err := db.Query(sqlStatement, uri)
+		defer rows.Close()
+		if err != nil {
+			log.Fatalln(err)
+		}
+		for rows.Next() {
+			a := new(Anime)
+			err := rows.Scan(&a.Id, &a.Title, &a.Description, &a.Date, &a.Season, &a.Imageurl)
+			if err != nil {
+				log.Fatalln(err)
+			}
+			animes = append(animes, a)
+		}
+		fmt.Println("200 SUCCESS")
+		w.Header().Set("Content-type", "application/json")
+		w.WriteHeader(200)
+		err = json.NewEncoder(w).Encode(animes)
+		if err != nil {
+			log.Fatalln(err)
+		}
+		return
+	case "POST":
+		fmt.Fprint(w, "POST")
+	default:
+		log.Fatalln("Bad Request")
+	}
+
+}
+
 func handleSingleCharacterRoute(w http.ResponseWriter, req *http.Request) {
 	db, err := sql.Open("postgres", connStr)
 	if err != nil {
@@ -287,10 +336,10 @@ func main() {
 
 	router := mux.NewRouter()
 
+	router.HandleFunc("/api/animes/genre/{genre}", handleAnimesGenreRoute)
+	router.HandleFunc("/api/animes/{id:.+}", handleSingleAnimeRoute)
 	router.HandleFunc("/api/animes", handleAnimeRoute)
-	router.HandleFunc("/api/animes/{id:.+}", handleSingleAnimeRoute)
 	router.HandleFunc("/api/genres/{id:.+}", handleGenreRoute)
-	router.HandleFunc("/api/animes/{id:.+}", handleSingleAnimeRoute)
 	router.HandleFunc("/api/characters/{id:.+}", handleCharactersRoute)
 	router.HandleFunc("/api/character/{id:.+}", handleSingleCharacterRoute)
 

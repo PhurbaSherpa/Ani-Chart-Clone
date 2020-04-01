@@ -5,4 +5,6 @@ export { default as SeasonList } from "./SeasonList/SeasonList";
 export { default as AnimeDetails } from "./AnimeDetails/AnimeDetails";
 export { default as Detailsbar } from "./Detailsbar/Detailsbar";
 export { default as SingleCharacter } from "./SingleCharacter/SingleCharacter";
+export { default as SingleAnime } from "./SingleAnime/SingleAnime";
 export { default as CharacterDetails } from "./CharacterDetails/CharacterDetails";
+export { default as GenreList } from "./GenreList/GenreList";

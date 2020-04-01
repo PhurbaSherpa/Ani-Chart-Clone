@@ -5,7 +5,8 @@ import {
   Home,
   SeasonList,
   AnimeDetails,
-  CharacterDetails
+  CharacterDetails,
+  GenreList
 } from "./components";
 
 export default function Routes(props) {
@@ -14,6 +15,7 @@ export default function Routes(props) {
     <Switch>
       <Route path="/character/:id" component={CharacterDetails} />
       <Route path="/animes/:id" component={AnimeDetails} />
+      <Route path="/genre/:genre" component={GenreList} />
       <Route
         path="/Winter"
         render={navProps => <SeasonList {...navProps} animes={animes} />}

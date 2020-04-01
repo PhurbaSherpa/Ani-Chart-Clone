@@ -24,6 +24,10 @@
   text-decoration: none;
 }
 
+.genre {
+  color: black;
+}
+
 .genre:hover {
   text-decoration: underline;
   cursor: pointer;
