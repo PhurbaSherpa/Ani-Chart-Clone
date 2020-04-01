@@ -17,5 +17,27 @@ export default function CharacterDetails(props) {
 
   console.log(character);
 
-  return <div></div>;
+  return (
+    <div>
+      <Navbar />
+      <div className="card mb-3 character-info">
+        <div className="row no-gutters">
+          <div className="col-md-4">
+            <img src={character.Imageurl} className="card-img" alt="..." />
+          </div>
+          <div className="col-md-8">
+            <div className="card-body">
+              <h5 className="card-title">{character.Name}</h5>
+              <p className="card-text detail-description">
+                {character.Description}
+              </p>
+              <p className="card-text">
+                <small className="text-muted">Role: {character.Role}</small>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
