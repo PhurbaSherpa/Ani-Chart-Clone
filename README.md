@@ -1,5 +1,7 @@
 # Ani-Chart Clone
 
+<img src="./static/res/homepic.png" width=500px/>
+
 ## Purpose
 
 I wanted to learn something new in web development and the best way to do that is to tackle a project with the thing I want to learn and thats Go. So I chose this site to clone because it has basic functions of a CRUD app. May add some of my own ideas.
@@ -11,6 +13,8 @@ I wanted to learn something new in web development and the best way to do that i
 - Users should be able to see a list of animes based on season
 - Users should be able to click on an anime to get a more comprehensive view of it
 - Users should be able to click on characters to get detailed info
+
+<img src="./static/res/allpic.png" width=500px/>
 
 #### Tier 2
 

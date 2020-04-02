@@ -1,12 +1,8 @@
 import React from "react";
 import "./home.css";
-import TopThree from "../TopThree/TopThree";
 import Navbar from "../Navbar/Navbar";
 
 export default function Home(props) {
-  let animes =
-    props.animes.length >= 3 ? props.animes.slice(0, 3) : props.animes;
-
   return (
     <div>
       <div className="hero">
@@ -22,9 +18,6 @@ export default function Home(props) {
           </a>
         </div>
       </div>
-      <section id="topThree">
-        <TopThree animes={animes} />
-      </section>
     </div>
   );
 }
